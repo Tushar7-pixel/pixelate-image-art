@@ -52,7 +52,9 @@ export function processImage(
             floatBuf[i * 3 + 2] = rawData.data[i * 4 + 2];
         }
         const quantized = applyFloydSteinberg(floatBuf, targetW, targetH, palette);
-        outputData = new ImageData(quantized, targetW, targetH);
+        outputData = ctx.createImageData(targetW, targetH);
+        outputData.data.set(quantized);
+
     } else {
         outputData = ctx.createImageData(targetW, targetH);
         for (let y = 0; y < targetH; y++) {

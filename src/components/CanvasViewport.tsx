@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect, useCallback } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { ZoomIn, ZoomOut, RotateCcw, Grid3X3, Eye } from "lucide-react";
 
 interface PixelInfo {
